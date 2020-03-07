@@ -22,7 +22,7 @@ test-coverage:
 	rm -rf coverage .coverage
 	pytest --cov=imblearn imblearn
 
-test: test-coverage test-doc
+test: test-coverage test-doc 
 
 html:
 	export SPHINXOPTS=-W; make -C doc html
