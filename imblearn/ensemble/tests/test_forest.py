@@ -62,7 +62,7 @@ def test_balanced_random_forest_error_warning_warm_start(imbalanced_dataset):
 
 
 def test_balanced_random_forest(imbalanced_dataset):
-    n_estimators = 10
+    n_estimators = 1
     brf = BalancedRandomForestClassifier(
         n_estimators=n_estimators, random_state=0
     )
@@ -116,8 +116,8 @@ def test_balanced_random_forest_oob(imbalanced_dataset):
         X, y, random_state=42, stratify=y
     )
     est = BalancedRandomForestClassifier(
-        oob_score=True, random_state=0, n_estimators=1000,
-        min_samples_leaf=2,
+        oob_score=True, random_state=0, n_estimators=390,
+        min_samples_leaf=6,
     )
 
     est.fit(X_train, y_train)
