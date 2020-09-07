@@ -36,11 +36,11 @@ source activate testenv
 pip install --upgrade pip setuptools
 echo "Installing numpy, scipy, and pandas master wheels"
 dev_url=https://pypi.anaconda.org/scipy-wheels-nightly/simple
-pip install --pre --upgrade --timeout=60 -f $dev_url numpy scipy pandas
+pip install  numpy scipy pandas
 echo "Installing joblib master"
 pip install https://github.com/joblib/joblib/archive/master.zip
 echo "Installing scikit-learn master"
-pip install --pre --extra-index $dev_url scikit-learn
+pip install scikit-learn==0.23.2
 
 conda install --yes pytest pytest-cov
 pip install codecov
