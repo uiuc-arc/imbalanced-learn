@@ -43,7 +43,7 @@ echo "Installing scikit-learn master"
 pip install scikit-learn==0.23.2
 
 conda install --yes pytest pytest-cov
-pip install codecov
+pip install codecov pytest-xdist
 pip install -U git+https://github.com/numpy/numpydoc.git
 
 python --version
